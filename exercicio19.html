@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script>
+    let capitalInicial = parseFloat(prompt("DIGITE O CAPITAL INICIAL:"));
+
+    let taxaJuros = parseFloat(prompt("DIGITE A TAXA DE JUROS: ")) / 100;
+    
+    let tempo = parseFloat(prompt("DIGITE O TEMPO DE APLICAÇÃO(EM ANOS): "));
+    
+    function juroSimples(capitalInicial, taxaJuros, tempo) {
+      
+      let montante = capitalInicial + (capitalInicial * taxaJuros * tempo);
+      return montante;
+    }
+       
+       function juroCompostos(capitalInicial, taxaJuros, tempo) {
+      let montante = capitalInicial * Math.pow(1 + taxaJuros, tempo);
+      return montante;
+    }
+    
+    let montanteSimples = juroSimples(capitalInicial, taxaJuros, tempo);
+    let montanteCompostos = juroCompostos(capitalInicial, taxaJuros, tempo);
+
+    document.write("O montante da aplicação financeira sob o regime de juros simples: R$ " + montanteSimples.toFixed(2) + "<BR>");
+    document.write("<BR>" + "O valor da aplicação sob o regime de juros compostos: R$ " + montanteCompostos.toFixed(2) + "<BR>");
+  </script>
+
+</body>
+
+</html>
