@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script>
+      let num = parseInt(prompt("DIGITE UM NÚMERO:"));
+      function impares(inicio = 0, fim = 100) {
+          
+          if (inicio > fim) {
+              [inicio, fim] = [fim, inicio];
+          }
+
+          let resultado = '';
+
+          
+          for (let i = inicio; i <= fim; i++) {
+              if (i % 2 !== 0) {
+                  resultado += i + ' ';
+              }
+          }
+
+          return resultado.trim();
+      }
+
+      let resultado = imprimirImpares(num, 100);
+      console.write(resultado);
+
+  </script>
+
+</body>
+
+</html>
